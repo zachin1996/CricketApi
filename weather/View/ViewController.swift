@@ -7,11 +7,16 @@
 //
 
 import UIKit
-
+import TextFieldEffects
 class ViewController: UIViewController,UITextFieldDelegate{
-    @IBOutlet weak var mobileTextfield: UITextField!
-    @IBOutlet weak var schoolCodeTextfield: UITextField!
-    @IBOutlet weak var passwordTextfield: UITextField!
+    
+    @IBOutlet weak var mobileTextfield: HoshiTextField!
+    
+    @IBOutlet weak var schoolcodeField: HoshiTextField!
+    @IBOutlet weak var passwordTextfield: HoshiTextField!
+    
+    @IBOutlet weak var loginButton: UIButton!
+    
     @IBAction func forgotPasswordButton(_ sender: Any) {
     }
     @IBOutlet weak var viewShadow: UIView!
@@ -35,7 +40,7 @@ class ViewController: UIViewController,UITextFieldDelegate{
     
     @IBAction func loginButton(_ sender: Any) {
         
-            
+        
         if (mobileTextfield.text != nil) && (passwordTextfield.text == passWord.description){
             
             let user = mobileTextfield.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -86,20 +91,13 @@ class ViewController: UIViewController,UITextFieldDelegate{
         // Do any additional setup after loading the view, typically from a nib.
         mobileTextfield.delegate = self
        viewShadow.dropShadow()
-        getdata()
+//        mobileTextfield.setBorder()
+//        mobileTextfield.setPadding()
+        self.navigationController?.isNavigationBarHidden=true
+      //  mobileTextfield.placeholderFontScale = 0.3
+       loginButton.buttonshadow()
         
 }
-    func  getdata(){
-        APIManager.sharedInstance.getPostid(urlToPost: "", OnSuccess:{(response) in
-            
-            print("response is ",response)
-            
-        })
-        {(error) in
-            print("error",error)
-        }
-        
-    }
 }
 extension UIView{
     func dropShadow() {
@@ -112,15 +110,41 @@ extension UIView{
             shadowLayer = CAShapeLayer()
             shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath
             shadowLayer.fillColor = fillColor.cgColor
-            shadowLayer.shadowColor = UIColor.black.withAlphaComponent(0.5).cgColor
+            shadowLayer.shadowColor = UIColor.gray.withAlphaComponent(0.5).cgColor
             shadowLayer.shadowPath = shadowLayer.path
             shadowLayer.shadowOffset = CGSize(width: 0, height: 0)
-            shadowLayer.shadowOpacity = 0.8
-            shadowLayer.shadowRadius = 4
+            shadowLayer.shadowOpacity = 0.6
+            shadowLayer.shadowRadius = 20
             
             layer.insertSublayer(shadowLayer, at: 0)
         }
+    }}
+extension UIButton{
+func buttonshadow(){
+        self.layer.shadowColor = UIColor.blue.cgColor
+        self.layer.shadowOffset = CGSize(width: 5, height: 5)
+        self.layer.shadowRadius = 5
+        self.layer.shadowOpacity = 1.0
+    
     }
 }
+//extension UITextField {
+//    func setPadding(){
+//        let paddingView = UIView(frame: CGRect( x: 0, y: 0, width: 10, height: self.frame.height))
+//        self.leftView = paddingView
+//        self.leftViewMode = .always
+//
+//    }
+//    func setBorder()  {
+//
+//        self.borderStyle = .none
+//        self.layer.backgroundColor = UIColor.black.cgColor
+//        self.layer.masksToBounds = false
+//        self.layer.shadowColor = UIColor.white.cgColor
+//        self.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+//        self.layer.shadowOpacity = 0.0
+//        self.layer.shadowRadius = 0.0
+//    }
+//}
 
 

@@ -45,13 +45,14 @@
                         <userGuides>
                             <userLayoutGuide location="30" affinity="minX"/>
                             <userLayoutGuide location="384" affinity="minX"/>
-                            <userLayoutGuide location="50" affinity="minX"/>
-                            <userLayoutGuide location="364" affinity="minX"/>
+                            <userLayoutGuide location="60" affinity="minX"/>
+                            <userLayoutGuide location="354" affinity="minX"/>
                         </userGuides>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login" translatesAutoresizingMaskIntoConstraints="NO" id="Ldy-sJ-lSs">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" red="1" green="0.91095315239999997" blue="0.43117505039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1NW-lh-eAc">
                                 <rect key="frame" x="30" y="294" width="354" height="394"/>
@@ -60,74 +61,137 @@
                                         <rect key="frame" x="20" y="19" width="314" height="401"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="rg1-u4-eST">
-                                                <rect key="frame" x="0.0" y="0.0" width="314" height="66"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="76"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7g-Ku-cfs" userLabel="Mobile">
                                                         <rect key="frame" x="0.0" y="0.0" width="314" height="19"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dYN-jD-kLL">
-                                                        <rect key="frame" x="0.0" y="26" width="314" height="40"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dYN-jD-kLL" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                                        <rect key="frame" x="30" y="8" width="254" height="60"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="EzS-dV-zXP"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="aF2-07-E44"/>
                                                         </constraints>
-                                                        <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                <color key="value" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                                <color key="value" red="0.54467875489999995" green="0.68709342200000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </textField>
                                                 </subviews>
+                                                <edgeInsets key="layoutMargins" top="8" left="30" bottom="8" right="30"/>
+                                                <variation key="default">
+                                                    <mask key="subviews">
+                                                        <exclude reference="A7g-Ku-cfs"/>
+                                                    </mask>
+                                                </variation>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="OSQ-ER-99I">
-                                                <rect key="frame" x="0.0" y="79" width="314" height="65"/>
+                                                <rect key="frame" x="0.0" y="89" width="314" height="76"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="School Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxB-Es-Dho" userLabel="School Code">
                                                         <rect key="frame" x="0.0" y="0.0" width="314" height="19"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rE4-s6-QeR">
-                                                        <rect key="frame" x="0.0" y="25" width="314" height="40"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="School Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rE4-s6-QeR" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                                        <rect key="frame" x="30" y="8" width="254" height="60"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="VQj-Xf-s29"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="F1x-a8-TmO"/>
                                                         </constraints>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                <color key="value" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                                <color key="value" red="0.54467875489999995" green="0.68709342200000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </textField>
                                                 </subviews>
+                                                <edgeInsets key="layoutMargins" top="8" left="30" bottom="8" right="30"/>
+                                                <variation key="default">
+                                                    <mask key="subviews">
+                                                        <exclude reference="oxB-Es-Dho"/>
+                                                    </mask>
+                                                </variation>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="2Cn-bB-Kv3">
-                                                <rect key="frame" x="0.0" y="157" width="314" height="66"/>
+                                                <rect key="frame" x="0.0" y="178" width="314" height="76"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqy-do-VMe" userLabel="Password">
                                                         <rect key="frame" x="0.0" y="0.0" width="314" height="19"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lh2-gl-BKS">
-                                                        <rect key="frame" x="0.0" y="26" width="314" height="40"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lh2-gl-BKS" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                                        <rect key="frame" x="30" y="8" width="254" height="60"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="0Lw-We-tTQ"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="VYc-fW-K3X"/>
                                                         </constraints>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                                                <real key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                <color key="value" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                                <color key="value" red="0.54467875489999995" green="0.68709342200000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
                                                     </textField>
                                                 </subviews>
+                                                <edgeInsets key="layoutMargins" top="8" left="30" bottom="8" right="30"/>
+                                                <variation key="default">
+                                                    <mask key="subviews">
+                                                        <exclude reference="bqy-do-VMe"/>
+                                                    </mask>
+                                                </variation>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="hIa-ZS-s2N">
-                                                <rect key="frame" x="0.0" y="236" width="314" height="165"/>
+                                                <rect key="frame" x="0.0" y="267" width="314" height="134"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="EPw-04-wXR">
-                                                        <rect key="frame" x="8" y="8" width="298" height="31"/>
+                                                        <rect key="frame" x="8" y="8" width="298" height="0.0"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mt-1D-X5z">
-                                                                <rect key="frame" x="171" y="-8" width="131" height="31"/>
-                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                                <rect key="frame" x="155" y="-15" width="122" height="30"/>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                                                 <state key="normal" title="Forgot Password?">
                                                                     <color key="titleColor" red="0.6664312481880188" green="0.39411956071853638" blue="0.91126209497451782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </state>
@@ -136,16 +200,16 @@
                                                                 </connections>
                                                             </button>
                                                         </subviews>
-                                                        <edgeInsets key="layoutMargins" top="-8" left="8" bottom="8" right="-4"/>
+                                                        <edgeInsets key="layoutMargins" top="-15" left="8" bottom="-15" right="21"/>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mUy-Fq-ldg">
-                                                        <rect key="frame" x="8" y="119" width="298" height="38"/>
+                                                        <rect key="frame" x="8" y="88" width="298" height="38"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmP-5U-MeV">
-                                                                <rect key="frame" x="35" y="-10" width="228" height="58"/>
+                                                                <rect key="frame" x="45" y="-10" width="208" height="58"/>
                                                                 <color key="backgroundColor" red="0.034738339483737946" green="0.57486420869827271" blue="0.97630459070205688" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                                 <state key="normal" title="LOGIN">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
@@ -163,7 +227,7 @@
                                                             <constraint firstAttribute="height" constant="38" id="Pfw-ar-4cV"/>
                                                             <constraint firstAttribute="width" constant="298" id="zEh-Nw-ko7"/>
                                                         </constraints>
-                                                        <edgeInsets key="layoutMargins" top="-10" left="35" bottom="-10" right="35"/>
+                                                        <edgeInsets key="layoutMargins" top="-10" left="45" bottom="-10" right="45"/>
                                                     </stackView>
                                                 </subviews>
                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
@@ -202,9 +266,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="mobileTextfield" destination="dYN-jD-kLL" id="J4I-hN-9ae"/>
-                        <outlet property="passwordTextfield" destination="lh2-gl-BKS" id="p08-eD-2cN"/>
-                        <outlet property="schoolCodeTextfield" destination="rE4-s6-QeR" id="Ai7-bw-if3"/>
+                        <outlet property="loginButton" destination="cmP-5U-MeV" id="m56-g8-1hx"/>
+                        <outlet property="mobileTextfield" destination="dYN-jD-kLL" id="1xq-KU-s81"/>
+                        <outlet property="passwordTextfield" destination="lh2-gl-BKS" id="eWA-Sk-Hnp"/>
+                        <outlet property="schoolcodeField" destination="rE4-s6-QeR" id="WLQ-Kc-0Vv"/>
                         <outlet property="viewShadow" destination="1NW-lh-eAc" id="yKb-m1-IbJ"/>
                         <segue destination="YkQ-kT-MCh" kind="show" identifier="Home" id="5ux-QJ-puF"/>
                     </connections>
@@ -304,7 +369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n5p-6b-vdC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="900.00000000000011" y="848.4375"/>
+            <point key="canvasLocation" x="919" y="933"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gbD-RM-A5U">
@@ -319,7 +384,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2io-I6-poH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1646" y="848"/>
+            <point key="canvasLocation" x="1697" y="933"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Y04-By-Ljf">
@@ -345,6 +410,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="5ux-QJ-puF"/>
-        <segue reference="Uc0-KZ-eOr"/>
+        <segue reference="Iwy-V6-9Ye"/>
     </inferredMetricsTieBreakers>
 </document>
