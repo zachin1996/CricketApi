@@ -316,7 +316,6 @@
                                                                 <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="zfg-uf-nll"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2Z-4B-jlp">
@@ -331,7 +330,6 @@
                                                                 <constraint firstAttribute="height" relation="lessThanOrEqual" constant="42" id="LfE-YG-rBQ"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8R2-6z-tqa" userLabel="Label1">
@@ -340,7 +338,6 @@
                                                                 <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="bOS-D5-gT2"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
-                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LlZ-AC-70t" userLabel="Label3">
@@ -349,11 +346,10 @@
                                                                 <constraint firstAttribute="height" relation="lessThanOrEqual" constant="42" id="2S6-gz-rEj"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.60287690162658691" green="0.78144890069961548" blue="0.92148751020431519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="FHT-gG-heQ" firstAttribute="leading" secondItem="iMr-Gt-ZG3" secondAttribute="leading" constant="20" id="0lX-H1-FFg"/>
                                                         <constraint firstItem="LlZ-AC-70t" firstAttribute="leading" secondItem="iMr-Gt-ZG3" secondAttribute="leading" constant="79" id="27X-IC-JXf"/>
@@ -379,7 +375,6 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.84498792886734009" green="0.94239294528961182" blue="0.95564359426498413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="iMr-Gt-ZG3" firstAttribute="trailing" secondItem="EFL-GX-Gxy" secondAttribute="trailingMargin" id="8F4-ki-NOC"/>
                                                 <constraint firstItem="iMr-Gt-ZG3" firstAttribute="leading" secondItem="EFL-GX-Gxy" secondAttribute="leadingMargin" id="XVV-fV-aen"/>
