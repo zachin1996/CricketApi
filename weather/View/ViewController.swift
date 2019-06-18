@@ -8,6 +8,7 @@
 
 import UIKit
 import TextFieldEffects
+
 class ViewController: UIViewController,UITextFieldDelegate{
     
     @IBOutlet weak var mobileTextfield: HoshiTextField!
@@ -33,42 +34,96 @@ class ViewController: UIViewController,UITextFieldDelegate{
         let result =  phoneTest.evaluate(with: value)
         return result
     }
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        //return Int(string) != nil
-        return string == "" || Int(string) != nil
+    
+    func validateEmpty(value: String?) -> Bool {
+        
+        if value == nil {
+            return false
+        }else if value == "" {
+            return false
+        }else {
+            return true
+        }
+        
     }
+    
+    
+    
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        print("what is this")
+//        //return Int(string) != nil
+//        return string == "" || Int(string) != nil
+//    }
     
     @IBAction func loginButton(_ sender: Any) {
         
         
-        if (mobileTextfield.text != nil) && (passwordTextfield.text == passWord.description){
+        if (mobileTextfield.text != nil) || (passwordTextfield.text == passWord.description){
             
             let user = mobileTextfield.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
-           
+            if (((validateEmpty(value: mobileTextfield.text) == false) && (validateEmpty(value: schoolcodeField.text) == false)) || ((validateEmpty(value: schoolcodeField.text) == false) && (validateEmpty (value: passwordTextfield.text) == false)) || ((validateEmpty (value: passwordTextfield.text) == false) && (validateEmpty(value: mobileTextfield.text) == false))) {
+                
+                let alertK = UIAlertController.init(title: "Oops!", message: "please fill the empty fields", preferredStyle: .alert)
+                let defaultL = UIAlertAction.init(title: "ok", style: .default, handler: nil)
+                alertK.addAction(defaultL)
+                present(alertK, animated: true, completion: nil)
+            }
+            
+            
+            if validateEmpty(value: mobileTextfield.text) == false{
+                let alertI = UIAlertController.init(title: "Info!!!", message: "please enter mobile number", preferredStyle: .alert)
+                let defaultJ = UIAlertAction.init(title: "ok", style: .default, handler: nil)
+                alertI.addAction(defaultJ)
+                
+                present(alertI, animated: true, completion: nil)
+            }
+            
             if validate(value: user) == false{
                 let alertC = UIAlertController.init(title: "Info", message: "Please enter a valid mobile number", preferredStyle: .alert)
                 let defaultA = UIAlertAction.init(title: "ok", style: .default, handler: nil)
                 alertC.addAction(defaultA)
                 present(alertC, animated: true, completion: nil)
             }
+            
+                
+            if validateEmpty(value: schoolcodeField.text) == false{
+                let alertB = UIAlertController.init(title: "Info!!!", message: "please enter schoolfield", preferredStyle: .alert)
+                let defaultD = UIAlertAction.init(title: "ok", style: .default, handler: nil)
+                alertB.addAction(defaultD)
+                
+                present(alertB, animated: true, completion: nil)
+            }
+            
+            if passwordTextfield.text == nil {
+                print("Password NILLLLLLLLLL")
+            }else {
+                print("Password NOTTTTTTTT NILLLLLLLLLL")
+
+            }
+            
+            if validateEmpty (value: passwordTextfield.text) == false {
+                let alertE = UIAlertController.init(title: "Info!!!", message: "Please enter password", preferredStyle: .alert)
+                let defaultF = UIAlertAction.init(title: "ok", style: .default, handler: nil)
+                alertE.addAction(defaultF)
+                present(alertE, animated: true, completion: nil)
+            }
+            
+             if !passwordTextfield.text!.elementsEqual(123.description) {
+                
+                let alertG = UIAlertController.init(title: "sorry!!!", message: "wrong password", preferredStyle: .alert)
+                let defaultH = UIAlertAction.init(title: "ok", style: .default, handler: nil)
+                alertG.addAction(defaultH)
+                present(alertG, animated: true, completion: nil)
+            }
+
+                
+                
+                
             else if ( user != userName) {
                 
                 performSegue(withIdentifier: "Home", sender: nil)
             }
-
-            
-            
-            
-        }
-        else {
-            let alertC = UIAlertController.init(title: "sorry!!!", message: "wrong password", preferredStyle: .alert)
-            let defaultA = UIAlertAction.init(title: "ok", style: .default, handler: nil)
-            let defaultB = UIAlertAction.init(title: "cancel", style: .default, handler: nil)
-            alertC.addAction(defaultA)
-            alertC.addAction(defaultB)
-            
-            present(alertC, animated: true, completion: nil)
             
         }
 //        UserDefaults.standard.set(Any?.self, forKey: "login")
@@ -81,21 +136,37 @@ class ViewController: UIViewController,UITextFieldDelegate{
 //        }
      UserDefaults.standard.set(true, forKey: Constants.preferacne.logout)
   }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        print("shouldChangeCharactersIn")
+        if textField == mobileTextfield{
+            let text = textField.text!
+            let newLength = text.count + string.count
+            print("count",text.count,"str-",string.count)
+            return newLength <= 10 && (string == "" || Int(string) != nil)
+        }
+        else{
+            return true
+        }
 
-                
+
+    }
+    
     
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        mobileTextfield.delegate = self
-       viewShadow.dropShadow()
+          mobileTextfield.delegate = self
+          viewShadow.dropShadow()
+          self.navigationController?.isNavigationBarHidden=true
+          loginButton.buttonshadow()
 //        mobileTextfield.setBorder()
 //        mobileTextfield.setPadding()
-        self.navigationController?.isNavigationBarHidden=true
-      //  mobileTextfield.placeholderFontScale = 0.3
-       loginButton.buttonshadow()
+//  mobileTextfield.placeholderFontScale = 0.3
+       
+        
         
 }
 }
@@ -122,9 +193,9 @@ extension UIView{
 extension UIButton{
 func buttonshadow(){
         self.layer.shadowColor = UIColor.blue.cgColor
-        self.layer.shadowOffset = CGSize(width: 5, height: 5)
-        self.layer.shadowRadius = 5
-        self.layer.shadowOpacity = 1.0
+        self.layer.shadowOffset = CGSize(width: 4, height: 20)
+        self.layer.shadowRadius = 30
+        self.layer.shadowOpacity = 0.5
     
     }
 }
