@@ -13,9 +13,13 @@ class MatchTableViewCell: UITableViewCell {
     @IBOutlet weak var t2Label: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
+    @IBOutlet weak var viewHomeShadow: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        viewHomeShadow.dropShadow()
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

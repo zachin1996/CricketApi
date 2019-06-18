@@ -15,6 +15,8 @@
 		030C9C6B229E998D0056FACE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030C9C69229E998D0056FACE /* LaunchScreen.storyboard */; };
 		037B716022A0E75F0025C5A1 /* initialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037B715F22A0E75F0025C5A1 /* initialViewController.swift */; };
 		0394FDFC229FD58F00690140 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0394FDFB229FD58F00690140 /* HomeViewController.swift */; };
+		03F5B73E22B0D6B100D5DACC /* logim.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F5B73D22B0D6B100D5DACC /* logim.storyboard */; };
+		03F5B74022B0DD7D00D5DACC /* Modeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F5B73F22B0DD7D00D5DACC /* Modeling.swift */; };
 		03FAFB5B22A4E2B800EF1AC9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FAFB5A22A4E2B800EF1AC9 /* APIManager.swift */; };
 		03FAFB5D22A4F5D700EF1AC9 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FAFB5C22A4F5D700EF1AC9 /* MatchTableViewCell.swift */; };
 		686BA784D9116D2523F9E8E6 /* Pods_weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A64FC5A9B2E5D3EAAA788FF /* Pods_weather.framework */; };
@@ -32,6 +34,8 @@
 		037B715F22A0E75F0025C5A1 /* initialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = initialViewController.swift; sourceTree = "<group>"; };
 		0394FDFB229FD58F00690140 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		03DBE07C90A85B535E182D36 /* Pods-weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weather.debug.xcconfig"; path = "Target Support Files/Pods-weather/Pods-weather.debug.xcconfig"; sourceTree = "<group>"; };
+		03F5B73D22B0D6B100D5DACC /* logim.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = logim.storyboard; sourceTree = "<group>"; };
+		03F5B73F22B0DD7D00D5DACC /* Modeling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modeling.swift; sourceTree = "<group>"; };
 		03FAFB5A22A4E2B800EF1AC9 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		03FAFB5C22A4F5D700EF1AC9 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MatchTableViewCell.swift; path = weather/View/MatchTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		134E50E43F22C3E70A1962A6 /* Pods-weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weather.release.xcconfig"; path = "Target Support Files/Pods-weather/Pods-weather.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +89,7 @@
 				03FAFB5C22A4F5D700EF1AC9 /* MatchTableViewCell.swift */,
 				037B715F22A0E75F0025C5A1 /* initialViewController.swift */,
 				030C9C69229E998D0056FACE /* LaunchScreen.storyboard */,
+				03F5B73D22B0D6B100D5DACC /* logim.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -95,6 +100,7 @@
 				030C9C5F229E998A0056FACE /* ViewController.swift */,
 				0394FDFB229FD58F00690140 /* HomeViewController.swift */,
 				03FAFB5A22A4E2B800EF1AC9 /* APIManager.swift */,
+				03F5B73F22B0DD7D00D5DACC /* Modeling.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -116,7 +122,6 @@
 				03DBE07C90A85B535E182D36 /* Pods-weather.debug.xcconfig */,
 				134E50E43F22C3E70A1962A6 /* Pods-weather.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -188,6 +193,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03F5B73E22B0D6B100D5DACC /* logim.storyboard in Resources */,
 				030C9C6B229E998D0056FACE /* LaunchScreen.storyboard in Resources */,
 				030C9C68229E998D0056FACE /* Assets.xcassets in Resources */,
 				030C9C63229E998A0056FACE /* Main.storyboard in Resources */,
@@ -248,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03F5B74022B0DD7D00D5DACC /* Modeling.swift in Sources */,
 				03FAFB5D22A4F5D700EF1AC9 /* MatchTableViewCell.swift in Sources */,
 				03FAFB5B22A4E2B800EF1AC9 /* APIManager.swift in Sources */,
 				030C9C66229E998A0056FACE /* weather.xcdatamodeld in Sources */,
